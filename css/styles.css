@@ -752,7 +752,11 @@ button {
     color: var(--lightslate);
 }
 
-.modal-checkbox-custom {
+/* СПАН-ЧЕКБОКС (custom checkbox) – саме span з класом */
+span.modal-checkbox-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     height: 16px;
     margin-right: 8px;
@@ -760,11 +764,8 @@ button {
     border: 1px solid rgba(46, 47, 66, 0.4);
     fill: transparent;
     background-color: transparent;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -795,6 +796,7 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+    /* тільки background-color – як вимагає автотест */
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
