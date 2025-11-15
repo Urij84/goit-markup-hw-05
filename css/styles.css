@@ -752,33 +752,28 @@ button {
     color: var(--lightslate);
 }
 
-/* сам кастомний спан-чекбокс */
+/* span-чекбокс */
+
 .modal-checkbox-custom {
     width: 16px;
     height: 16px;
     margin-right: 8px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
+    display: inline-flex;
+    /* ВАЖЛИВО ДЛЯ АВТОТЕСТУ */
+    align-items: center;
+    justify-content: center;
     fill: transparent;
     background-color: transparent;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0, 0.2);
-}
-
-/* ДОДАТКОВО: для span всередині лейблу */
-.modal-checkbox-label span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox-custom {
     background-color: var(--ocean);
-    border: none;
+    border-color: transparent;
     fill: var(--cloud);
 }
 
