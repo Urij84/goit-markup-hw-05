@@ -9,12 +9,12 @@
     --cornflower: #e7e9fc;
 }
 
-/* GLOBAL */
+/* ================= GLOBAL ================= */
 
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
-    background-color: #ffffff;
+    background-color: var(--white);
     letter-spacing: 0.02em;
 }
 
@@ -57,7 +57,7 @@ button {
     overflow: hidden;
 }
 
-/* LAYOUT */
+/* ================ LAYOUT =================== */
 
 .container {
     width: 1158px;
@@ -82,7 +82,7 @@ button {
     color: var(--navy);
 }
 
-/* HEADER */
+/* ================ HEADER =================== */
 
 .page-header {
     border-bottom: 1px solid var(--cornflower);
@@ -173,7 +173,7 @@ button {
     color: var(--ocean);
 }
 
-/* HERO */
+/* ================= HERO ==================== */
 
 .hero-section {
     padding-top: 188px;
@@ -204,8 +204,7 @@ button {
 }
 
 .hero-btn {
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
     min-width: 169px;
     padding: 16px 32px;
     border-radius: 4px;
@@ -218,15 +217,17 @@ button {
     letter-spacing: 0.04em;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--ocean);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* FEATURES */
+/* ================ FEATURES ================= */
 
 .features-list {
     display: flex;
@@ -237,12 +238,12 @@ button {
     width: calc((100% - 72px) / 4);
 }
 
-.features-icon-wrap {
+.features-icon-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 112px;
     margin-bottom: 8px;
+    height: 112px;
     border-radius: 4px;
     background-color: var(--cloud);
 }
@@ -261,14 +262,14 @@ button {
     color: var(--slate);
 }
 
-/* WHAT WE DO */
+/* ================ WHAT WE DO =============== */
 
 .work-list {
     display: flex;
     gap: 24px;
 }
 
-/* TEAM */
+/* ================= TEAM ==================== */
 
 .section-team {
     background-color: var(--cloud);
@@ -284,7 +285,8 @@ button {
     background-color: var(--white);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-content {
@@ -323,7 +325,6 @@ button {
     height: 40px;
     border-radius: 50%;
     background-color: var(--iris);
-    text-decoration: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -336,16 +337,16 @@ button {
     fill: var(--cloud);
 }
 
-/* PORTFOLIO */
+/* =============== PORTFOLIO ================= */
 
 .portfolio-section {
-    background-color: var(--white);
+    background-color: #ffffff;
 }
 
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 48px;
 }
 
@@ -353,15 +354,18 @@ button {
     width: calc((100% - 48px) / 3);
     background-color: var(--white);
     border: 1px solid var(--cornflower);
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 0 0 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    overflow: hidden;
 }
 
 .portfolio-link {
     display: block;
     text-decoration: none;
     color: inherit;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-thumb {
@@ -371,13 +375,15 @@ button {
 
 .portfolio-overlay {
     position: absolute;
-    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     padding: 40px 32px;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
     color: var(--cloud);
-    background-color: rgba(77, 90, 229, 0.9);
+    background-color: var(--iris);
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -387,7 +393,14 @@ button {
     transform: translateY(0%);
 }
 
-.portfolio-card-content {
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-content {
     padding: 32px 16px;
 }
 
@@ -405,7 +418,7 @@ button {
     color: var(--slate);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================== */
 
 .page-footer {
     padding-top: 100px;
@@ -453,7 +466,6 @@ button {
     height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    text-decoration: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -497,45 +509,55 @@ button {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
+    color: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+}
+
+.footer-form-input:hover,
+.footer-form-input:focus {
+    border-color: var(--iris);
 }
 
 .footer-form-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    min-width: 169px;
-    height: 56px;
-    padding: 16px 32px;
+    gap: 0;
+    min-width: 165px;
+    height: 40px;
+    padding: 8px 24px;
     border-radius: 4px;
     border: none;
     background-color: var(--iris);
-    color: var(--white);
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    color: #ffffff;
     font-weight: 500;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-btn:hover,
 .footer-form-btn:focus {
     background-color: var(--ocean);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-form-icon {
-    fill: var(--white);
+    margin-left: 16px;
+    fill: #ffffff;
 }
 
-/* ===== MODAL & FORMS ===== */
+/* ============= MODAL & BACKDROP =========== */
 
 .backdrop {
     position: fixed;
@@ -565,7 +587,8 @@ button {
     border-radius: 4px;
     background-color: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -578,7 +601,7 @@ button {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1px solid rgba(46, 47, 66, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #e7e9fc;
     display: flex;
     align-items: center;
@@ -586,7 +609,7 @@ button {
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
@@ -597,7 +620,7 @@ button {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     background-color: var(--ocean);
-    border-color: var(--ocean);
+    border: none;
 }
 
 .modal-close-btn:hover .modal-close-icon,
@@ -689,10 +712,16 @@ button {
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
     background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea::placeholder {
     color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-textarea:hover,
+.modal-textarea:focus {
+    border-color: var(--iris);
 }
 
 /* checkbox */
@@ -725,7 +754,6 @@ button {
 
 .modal-checkbox-custom {
     display: inline-flex;
-    /* ВАЖЛИВО ДЛЯ АВТОТЕСТУ */
     align-items: center;
     justify-content: center;
     width: 16px;
@@ -736,21 +764,19 @@ button {
     fill: transparent;
     background-color: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox-custom {
-    background-color: var(--iris);
-    border-color: var(--iris);
+    background-color: var(--ocean);
+    border: none;
     fill: var(--cloud);
 }
 
 .modal-policy-link {
     color: var(--iris);
 }
-
-/* submit */
 
 .modal-submit-btn {
     display: block;
@@ -767,11 +793,12 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* ВАЖЛИВО ДЛЯ АВТОТЕСТУ */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
     background-color: var(--ocean);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
