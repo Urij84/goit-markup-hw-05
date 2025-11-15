@@ -9,19 +9,12 @@
     --cornflower: #e7e9fc;
 }
 
-/* ===== GLOBAL RESET ===== */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+/* GLOBAL */
 
 body {
-    margin: 0;
     font-family: "Roboto", sans-serif;
     color: var(--slate);
-    background-color: var(--white);
+    background-color: #ffffff;
     letter-spacing: 0.02em;
 }
 
@@ -64,7 +57,7 @@ button {
     overflow: hidden;
 }
 
-/* ===== LAYOUT ===== */
+/* LAYOUT */
 
 .container {
     width: 1158px;
@@ -89,7 +82,7 @@ button {
     color: var(--navy);
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
 .page-header {
     border-bottom: 1px solid var(--cornflower);
@@ -147,11 +140,11 @@ button {
     color: var(--ocean);
 }
 
-.nav-link.current {
+.nav-link-current {
     color: var(--ocean);
 }
 
-.nav-link.current::after {
+.nav-link-current::after {
     content: "";
     position: absolute;
     left: 0;
@@ -180,7 +173,7 @@ button {
     color: var(--ocean);
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero-section {
     padding-top: 188px;
@@ -224,20 +217,17 @@ button {
     letter-spacing: 0.04em;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition:
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--ocean);
-    box-shadow:
-        0px 4px 4px rgba(0, 0, 0, 0.15),
-        0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== FEATURES ===== */
+/* FEATURES */
 
 .features-list {
     display: flex;
@@ -246,21 +236,6 @@ button {
 
 .features-item {
     width: calc((100% - 72px) / 4);
-}
-
-.features-icon-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 112px;
-    margin-bottom: 8px;
-    border-radius: 4px;
-    border: 1px solid var(--cornflower);
-    background-color: var(--cloud);
-}
-
-.features-icon {
-    fill: var(--navy);
 }
 
 .features-title {
@@ -277,18 +252,14 @@ button {
     color: var(--slate);
 }
 
-/* ===== WHAT WE ARE DOING ===== */
+/* WHAT WE DO */
 
 .work-list {
     display: flex;
     gap: 24px;
 }
 
-.work-item {
-    width: calc((100% - 48px) / 3);
-}
-
-/* ===== TEAM ===== */
+/* TEAM */
 
 .section-team {
     background-color: var(--cloud);
@@ -303,10 +274,8 @@ button {
     width: calc((100% - 72px) / 4);
     background-color: var(--white);
     border-radius: 0px 0px 4px 4px;
-    box-shadow:
-        0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-content {
@@ -337,8 +306,6 @@ button {
     margin-top: 8px;
 }
 
-.team-social-item {}
-
 .team-social-link {
     display: inline-flex;
     align-items: center;
@@ -360,36 +327,40 @@ button {
     fill: var(--cloud);
 }
 
-/* ===== PORTFOLIO ===== */
+/* PORTFOLIO */
 
-.section-portfolio {
+.portfolio-section {
     background-color: var(--white);
 }
 
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
+    gap: 24px;
     row-gap: 48px;
 }
 
 .portfolio-item {
     width: calc((100% - 48px) / 3);
+    background-color: var(--white);
+    border: 1px solid var(--cornflower);
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link {
     display: block;
-    text-decoration: none;
     color: inherit;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
-    box-shadow:
-        0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+.portfolio-item:hover,
+.portfolio-item:focus-within {
+    border-color: transparent;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-thumb {
@@ -402,29 +373,28 @@ button {
     inset: 0;
     padding: 40px 32px;
     background-color: rgba(77, 90, 229, 0.9);
-    color: var(--cloud);
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--cloud);
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover .portfolio-overlay,
-.portfolio-link:focus .portfolio-overlay {
-    transform: translateY(0%);
+.portfolio-item:hover .portfolio-overlay,
+.portfolio-item:focus-within .portfolio-overlay {
+    transform: translateY(0);
 }
 
-.portfolio-content {
+.portfolio-info {
     padding: 32px 16px;
-    border: 1px solid var(--cornflower);
-    border-top: none;
 }
 
 .portfolio-title {
     margin-bottom: 8px;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
     color: var(--navy);
 }
 
@@ -434,7 +404,7 @@ button {
     color: var(--slate);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 .page-footer {
     padding-top: 100px;
@@ -459,8 +429,6 @@ button {
     line-height: 1.5;
     color: var(--cloud);
 }
-
-/* footer social */
 
 .footer-social-title {
     margin-bottom: 16px;
@@ -497,7 +465,7 @@ button {
     fill: var(--cloud);
 }
 
-/* footer subscribe */
+/* FOOTER SUBSCRIBE FORM */
 
 .footer-subscribe {
     margin-left: auto;
@@ -519,15 +487,17 @@ button {
 
 .footer-form-input {
     width: 264px;
+    height: 40px;
     padding: 8px 16px;
     border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ffffff;
     background-color: transparent;
     outline: transparent;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 2;
     letter-spacing: 0.04em;
     color: var(--white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -544,7 +514,6 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
     min-width: 165px;
     height: 40px;
     padding: 8px 24px;
@@ -557,9 +526,9 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition:
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-btn:hover,
@@ -570,6 +539,7 @@ button {
 
 .footer-form-icon {
     fill: var(--white);
+    margin-left: 16px;
 }
 
 /* ===== MODAL & FORMS ===== */
@@ -581,8 +551,7 @@ button {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition:
-        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -602,10 +571,9 @@ button {
     padding: 72px 24px 24px;
     border-radius: 4px;
     background-color: #fcfcfc;
-    box-shadow:
-        0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* close button */
@@ -617,16 +585,15 @@ button {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1px solid rgba(46, 47, 66, 0.1);
-    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #e7e9fc;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     cursor: pointer;
-    transition:
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
@@ -637,7 +604,7 @@ button {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     background-color: var(--ocean);
-    border-color: var(--ocean);
+    border: none;
 }
 
 .modal-close-btn:hover .modal-close-icon,
@@ -662,6 +629,10 @@ button {
 
 .modal-field {
     margin-bottom: 8px;
+}
+
+.modal-field-comment {
+    margin-bottom: 16px;
 }
 
 .modal-label {
@@ -723,7 +694,8 @@ button {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: var(--navy);
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -775,15 +747,14 @@ button {
     border: 1px solid rgba(46, 47, 66, 0.4);
     fill: transparent;
     background-color: transparent;
-    transition:
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox-custom {
-    background-color: var(--iris);
-    border-color: var(--iris);
+    background-color: var(--ocean);
+    border: none;
     fill: var(--cloud);
 }
 
@@ -791,7 +762,7 @@ button {
     color: var(--iris);
 }
 
-/* submit button */
+/* submit */
 
 .modal-submit-btn {
     display: block;
@@ -808,9 +779,9 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition:
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit-btn:hover,
