@@ -752,7 +752,7 @@ button {
     color: var(--lightslate);
 }
 
-/* СПАН-ЧЕКБОКС (custom checkbox) – той самий span з класом */
+/* СПАН-ЧЕКБОКС (коректний варіант для автотесту) */
 .modal-checkbox-custom {
     display: inline-flex;
     align-items: center;
@@ -796,7 +796,6 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    /* тільки background-color – як вимагає автотест */
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
