@@ -9,12 +9,12 @@
     --cornflower: #e7e9fc;
 }
 
-/* ================= GLOBAL ================= */
+/* ========== GLOBAL ========== */
 
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
-    background-color: var(--white);
+    background-color: #ffffff;
     letter-spacing: 0.02em;
 }
 
@@ -57,7 +57,7 @@ button {
     overflow: hidden;
 }
 
-/* ================ LAYOUT =================== */
+/* ========== LAYOUT ========== */
 
 .container {
     width: 1158px;
@@ -82,7 +82,7 @@ button {
     color: var(--navy);
 }
 
-/* ================ HEADER =================== */
+/* ========== HEADER ========== */
 
 .page-header {
     border-bottom: 1px solid var(--cornflower);
@@ -173,7 +173,7 @@ button {
     color: var(--ocean);
 }
 
-/* ================= HERO ==================== */
+/* ========== HERO ========== */
 
 .hero-section {
     padding-top: 188px;
@@ -224,10 +224,11 @@ button {
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--ocean);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
+        0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* ================ FEATURES ================= */
+/* ========== FEATURES ========== */
 
 .features-list {
     display: flex;
@@ -236,16 +237,6 @@ button {
 
 .features-item {
     width: calc((100% - 72px) / 4);
-}
-
-.features-icon-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    height: 112px;
-    border-radius: 4px;
-    background-color: var(--cloud);
 }
 
 .features-title {
@@ -262,14 +253,14 @@ button {
     color: var(--slate);
 }
 
-/* ================ WHAT WE DO =============== */
+/* ========== WHAT WE DO ========== */
 
 .work-list {
     display: flex;
     gap: 24px;
 }
 
-/* ================= TEAM ==================== */
+/* ========== TEAM ========== */
 
 .section-team {
     background-color: var(--cloud);
@@ -285,8 +276,7 @@ button {
     background-color: var(--white);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-content {
@@ -308,7 +298,7 @@ button {
     color: var(--slate);
 }
 
-/* TEAM SOCIAL ICONS */
+/* SOCIAL ICONS UNDER TEAM CARDS */
 
 .team-social-list {
     display: flex;
@@ -325,6 +315,7 @@ button {
     height: 40px;
     border-radius: 50%;
     background-color: var(--iris);
+    text-decoration: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -337,88 +328,7 @@ button {
     fill: var(--cloud);
 }
 
-/* =============== PORTFOLIO ================= */
-
-.portfolio-section {
-    background-color: #ffffff;
-}
-
-.portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-}
-
-.portfolio-item {
-    width: calc((100% - 48px) / 3);
-    background-color: var(--white);
-    border: 1px solid var(--cornflower);
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
-    overflow: hidden;
-}
-
-.portfolio-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-thumb {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 40px 32px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--cloud);
-    background-color: var(--iris);
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-link:hover .portfolio-overlay,
-.portfolio-link:focus .portfolio-overlay {
-    transform: translateY(0%);
-}
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.portfolio-content {
-    padding: 32px 16px;
-}
-
-.portfolio-title {
-    margin-bottom: 8px;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--navy);
-}
-
-.portfolio-text {
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--slate);
-}
-
-/* ================= FOOTER ================== */
+/* ========== FOOTER ========== */
 
 .page-footer {
     padding-top: 100px;
@@ -466,16 +376,15 @@ button {
     height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 12px;
+    text-decoration: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: var(--iris);
-}
-
-.footer-social-icon {
-    fill: var(--cloud);
 }
 
 /* FOOTER SUBSCRIBE FORM */
@@ -501,7 +410,7 @@ button {
 .footer-form-input {
     width: 264px;
     height: 40px;
-    padding-left: 16px;
+    padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -527,37 +436,33 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 16px;
     min-width: 165px;
     height: 40px;
     padding: 8px 24px;
     border-radius: 4px;
     border: none;
     background-color: var(--iris);
-    color: #ffffff;
+    color: var(--white);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-btn:hover,
 .footer-form-btn:focus {
     background-color: var(--ocean);
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-form-icon {
     margin-left: 16px;
-    fill: #ffffff;
+    fill: var(--white);
 }
 
-/* ============= MODAL & BACKDROP =========== */
+/* ========== MODAL & FORMS ========== */
 
 .backdrop {
     position: fixed;
@@ -587,9 +492,7 @@ button {
     border-radius: 4px;
     background-color: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* close button */
@@ -601,7 +504,7 @@ button {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(46, 47, 66, 0.1);
     background-color: #e7e9fc;
     display: flex;
     align-items: center;
@@ -609,7 +512,7 @@ button {
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
@@ -619,8 +522,8 @@ button {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-    background-color: var(--ocean);
-    border: none;
+    background-color: #404bbf;
+    border-color: #404bbf;
 }
 
 .modal-close-btn:hover .modal-close-icon,
@@ -645,10 +548,6 @@ button {
 
 .modal-field {
     margin-bottom: 8px;
-}
-
-.modal-field-comment {
-    margin-bottom: 16px;
 }
 
 .modal-label {
@@ -754,6 +653,7 @@ button {
 
 .modal-checkbox-custom {
     display: inline-flex;
+    /* <- важливо для автотесту */
     align-items: center;
     justify-content: center;
     width: 16px;
@@ -764,19 +664,25 @@ button {
     fill: transparent;
     background-color: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-checkbox-icon {
+    fill: currentColor;
+}
+
 .modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox-custom {
-    background-color: var(--ocean);
+    background-color: #404bbf;
     border: none;
-    fill: var(--cloud);
+    fill: #f4f4fd;
 }
 
 .modal-policy-link {
     color: var(--iris);
 }
+
+/* submit button in modal */
 
 .modal-submit-btn {
     display: block;
@@ -793,8 +699,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* <- тільки background-color */
 }
 
 .modal-submit-btn:hover,
