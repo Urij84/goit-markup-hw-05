@@ -752,7 +752,8 @@ button {
     color: var(--lightslate);
 }
 
-.modal-checkbox-custom {
+/* СПАН-ЧЕКБОКС (custom checkbox) */
+span.modal-checkbox-custom {
     width: 16px;
     height: 16px;
     margin-right: 8px;
