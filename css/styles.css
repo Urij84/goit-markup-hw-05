@@ -752,7 +752,8 @@ button {
     color: var(--lightslate);
 }
 
-/* сам кастомний спан-чекбокс */
+/* span-чекбокс */
+
 .modal-checkbox-custom {
     width: 16px;
     height: 16px;
@@ -766,14 +767,7 @@ button {
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0, 0.2);
-}
-
-/* ДОДАТКОВО: для span всередині лейблу */
-.modal-checkbox-label span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox-custom {
