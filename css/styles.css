@@ -753,17 +753,17 @@ button {
 }
 
 /* СПАН-ЧЕКБОКС (custom checkbox) */
-span.modal-checkbox-custom {
+.modal-checkbox-custom {
     width: 16px;
     height: 16px;
     margin-right: 8px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    fill: transparent;
-    background-color: transparent;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    fill: transparent;
+    background-color: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
