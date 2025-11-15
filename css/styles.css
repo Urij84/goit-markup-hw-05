@@ -752,8 +752,8 @@ button {
     color: var(--lightslate);
 }
 
-/* СПАН-ЧЕКБОКС (custom checkbox) – саме span з класом */
-span.modal-checkbox-custom {
+/* СПАН-ЧЕКБОКС (custom checkbox) – той самий span з класом */
+.modal-checkbox-custom {
     display: inline-flex;
     align-items: center;
     justify-content: center;
