@@ -264,13 +264,6 @@ button {
   color: var(--slate);
 }
 
-/* ================ WHAT WE DO =============== */
-
-.work-list {
-  display: flex;
-  gap: 24px;
-}
-
 /* ================= TEAM ==================== */
 
 .section-team {
@@ -589,7 +582,8 @@ button {
   border-radius: 4px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -732,6 +726,7 @@ button {
   margin-bottom: 24px;
 }
 
+/* input ховаємо через клас visually-hidden – цього досить */
 .modal-checkbox-input.visually-hidden {
   position: absolute;
   width: 1px;
@@ -744,26 +739,24 @@ button {
   overflow: hidden;
 }
 
-.modal-checkbox-label {
-  display: flex;
-  align-items: center;
+/* підпис з текстом політики */
+.modal-terms-text {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--lightslate);
 }
 
-/* саме цей span – custom checkbox */
-
-.modal-checkbox-custom {
-  display: inline-flex; /* ВАЖЛИВО ДЛЯ АВТОТЕСТУ */
-  align-items: center;
-  justify-content: center;
+/* СПАН-ЧЕКБОКС – саме тут очікують display:inline-flex */
+.modal-terms-text .modal-checkbox-custom {
   width: 16px;
   height: 16px;
   margin-right: 8px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   fill: transparent;
   background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -771,7 +764,7 @@ button {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox-input:checked + .modal-checkbox-label .modal-checkbox-custom {
+.modal-checkbox-input:checked + .modal-terms-text .modal-checkbox-custom {
   background-color: var(--ocean);
   border: none;
   fill: var(--cloud);
@@ -798,7 +791,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
-  /* лише background-color – як вимагає автотест */
+  /* тільки background-color – як вимагає автотест */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
