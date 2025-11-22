@@ -1,79 +1,104 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-  <!-- FEATURES -->
+
+  <!-- ========= FEATURES ICONS ========= -->
+
   <symbol id="icon-antenna-1" viewBox="0 0 64 64">
-    <circle cx="32" cy="32" r="20" />
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="32" cy="44" r="3" />
+      <path d="M32 41V30" />
+      <path d="M22 26a14 14 0 0 1 20 0" />
+      <path d="M18 22a20 20 0 0 1 28 0" />
+      <path d="M26 34h12" />
+    </g>
   </symbol>
 
   <symbol id="icon-clock-1" viewBox="0 0 64 64">
-    <circle cx="32" cy="32" r="20" />
-    <path d="M32 18v14l10 6" />
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="32" cy="32" r="20" />
+      <path d="M32 20v12l9 6" />
+    </g>
   </symbol>
 
   <symbol id="icon-diagram-1" viewBox="0 0 64 64">
-    <rect x="14" y="30" width="8" height="20" />
-    <rect x="28" y="24" width="8" height="26" />
-    <rect x="42" y="18" width="8" height="32" />
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+      <rect x="10" y="30" width="12" height="22" rx="2" ry="2" />
+      <rect x="26" y="24" width="12" height="28" rx="2" ry="2" />
+      <rect x="42" y="18" width="12" height="34" rx="2" ry="2" />
+    </g>
   </symbol>
 
   <symbol id="icon-astronaut-1" viewBox="0 0 64 64">
-    <circle cx="32" cy="24" r="10" />
-    <rect x="20" y="34" width="24" height="16" rx="4" />
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="32" cy="20" r="10" />
+      <circle cx="32" cy="20" r="5" />
+      <rect x="20" y="32" width="24" height="18" rx="4" ry="4" />
+      <path d="M20 38H12v8h8M44 38h8v8h-8" />
+      <path d="M24 50v8M40 50v8" />
+    </g>
   </symbol>
 
-  <!-- SOCIAL -->
-  <symbol id="icon-instagram" viewBox="0 0 24 24">
-    <rect x="3" y="3" width="18" height="18" rx="5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle cx="17" cy="7" r="1" />
+  <!-- ========= SOCIAL ICONS ========= -->
+
+  <symbol id="icon-instagram" viewBox="0 0 16 16">
+    <g fill="currentColor">
+      <path d="M5 1h6c2.2 0 4 1.8 4 4v6c0 2.2-1.8 4-4 4H5c-2.2 0-4-1.8-4-4V5c0-2.2 1.8-4 4-4zm0 2C3.9 3 3 3.9 3 5v6c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5z" />
+      <path d="M8 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+      <circle cx="11.5" cy="4.5" r="0.8" />
+    </g>
   </symbol>
 
-  <symbol id="icon-twitter" viewBox="0 0 24 24">
-    <path
-      d="M20 7.5a5 5 0 0 1-2.1.6A3.1 3.1 0 0 0 19.5 6a5.3 5.3 0 0 1-2.3.9A3 3 0 0 0 9 9.6a8.4 8.4 0 0 1-6-3 3 3 0 0 0 .9 4 3 3 0 0 1-1.4-.4 3 3 0 0 0 2.4 3 3 3 0 0 1-1.4.1A3 3 0 0 0 6.7 15a6 6 0 0 1-4 1.1A8.4 8.4 0 0 0 9 18"
-    />
+  <symbol id="icon-twitter" viewBox="0 0 16 16">
+    <path fill="currentColor"
+      d="M15 4.3a4 4 0 0 1-1.2.3 2.1 2.1 0 0 0 .9-1.2 4 4 0 0 1-1.4.6A2 2 0 0 0 8 5.1a5.7 5.7 0 0 1-4-2 2 2 0 0 0 .6 2.7A2 2 0 0 1 3 5.5v.1a2 2 0 0 0 1.6 2 2 2 0 0 1-.9 0 2 2 0 0 0 1.9 1.4A4 4 0 0 1 2 10.3 5.7 5.7 0 0 0 5.1 11c3.9 0 6.1-3.4 6.1-6.3v-.3A4.5 4.5 0 0 0 15 4.3z" />
   </symbol>
 
-  <symbol id="icon-facebook" viewBox="0 0 24 24">
-    <path
-      d="M13 21v-7h3l1-4h-4V7.5A1.5 1.5 0 0 1 14.5 6H17V2h-3a5 5 0 0 0-5 5v3H6v4h3v7z"
-    />
+  <symbol id="icon-facebook" viewBox="0 0 16 16">
+    <path fill="currentColor"
+      d="M9 3h2V0H9C6.8 0 5 1.8 5 4v2H3v3h2v7h3v-7h2.1L11 6H8V4c0-.6.4-1 1-1z" />
   </symbol>
 
-  <symbol id="icon-linkedin" viewBox="0 0 24 24">
-    <rect x="3" y="9" width="4" height="12" />
-    <circle cx="5" cy="5" r="2" />
-    <path d="M11 9h4a4 4 0 0 1 4 4v8h-4v-8a1 1 0 0 0-1-1h-3z" />
+  <symbol id="icon-linkedin" viewBox="0 0 16 16">
+    <g fill="currentColor">
+      <path d="M2 1a1.5 1.5 0 1 1 0 3A1.5 1.5 0 0 1 2 1z" />
+      <path d="M1 5h2v10H1z" />
+      <path d="M6 5h2v1.4A2.7 2.7 0 0 1 11 5a3 3 0 0 1 3 3.2V15h-2V8.5c0-1-.6-1.7-1.5-1.7S9 7.5 9 8.5V15H7z" />
+    </g>
   </symbol>
 
-  <!-- FOOTER SEND -->
+  <!-- ========= UI ICONS (MODAL / FORM) ========= -->
+
   <symbol id="icon-send" viewBox="0 0 24 24">
-    <path d="M3 4l18 8-18 8 4-8-4-8z" />
+    <path fill="currentColor"
+      d="M3 4l18 8-18 8 3-8 8-0.1-8-0.9-3-7z" />
   </symbol>
 
-  <!-- MODAL INPUT ICONS -->
-  <symbol id="icon-person" viewBox="0 0 32 32">
-    <circle cx="16" cy="12" r="6" />
-    <path d="M6 26a10 10 0 0 1 20 0z" />
+  <symbol id="icon-close" viewBox="0 0 8 8">
+    <path fill="currentColor"
+      d="M1 0L0 1l3 3-3 3 1 1 3-3 3 3 1-1-3-3 3-3-1-1-3 3z" />
   </symbol>
 
-  <symbol id="icon-phone" viewBox="0 0 32 32">
-    <path
-      d="M10 4l3 2-2 5 3 4 4 3 5-2 2 3-2 4c-8 2-17-7-15-15z"
-    />
+  <symbol id="icon-person" viewBox="0 0 18 18">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="5" r="3" />
+      <path d="M3 15a6 6 0 0 1 12 0" />
+    </g>
   </symbol>
 
-  <symbol id="icon-email" viewBox="0 0 32 32">
-    <rect x="4" y="8" width="24" height="16" rx="2" />
-    <path d="M6 10l10 8 10-8" />
+  <symbol id="icon-phone" viewBox="0 0 18 18">
+    <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+      d="M5 2l2-1 2 3-1.5 1A9 9 0 0 0 11 11.5l1.5-1.5 3 2-1 2.5a2 2 0 0 1-2 1.3A11 11 0 0 1 3.7 4a2 2 0 0 1 1.3-2z" />
   </symbol>
 
-  <!-- CHECKBOX -->
-  <symbol id="icon-check" viewBox="0 0 16 16">
-    <path d="M3 9l3 3 7-8" />
+  <symbol id="icon-email" viewBox="0 0 18 18">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="14" height="10" rx="1.5" ry="1.5" />
+      <path d="M3 5.5l6 4 6-4" />
+    </g>
   </symbol>
 
-  <!-- CLOSE -->
-  <symbol id="icon-close" viewBox="0 0 16 16">
-    <path d="M3 3l10 10M13 3L3 13" />
+  <symbol id="icon-check" viewBox="0 0 10 8">
+    <path fill="currentColor"
+      d="M3.5 7.5L0 4l1.4-1.4 2.1 2.1L8.6 0 10 1.4z" />
   </symbol>
+
 </svg>
