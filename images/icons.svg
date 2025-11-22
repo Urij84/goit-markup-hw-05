@@ -1,28 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
 
   <!-- ANTENNA -->
-  <symbol id="icon-antenna" viewBox="0 0 64 64">
-    <path d="M31.9997 0C23.8903 0 16.3153 3.16267 10.857 8.62133C5.39866 14.08 2.236 21.655 2.236 29.7644C2.236 31.2238 3.41533 32.4031 4.87466 32.4031C6.334 32.4031 7.51333 31.2238 7.51333 29.7644C7.51333 23.0264 10.179 16.6831 14.84 12.0211C19.502 7.35911 25.8453 4.69344 32.5833 4.69344C39.3213 4.69344 45.6647 7.35911 50.3267 12.0211C54.9887 16.6831 57.6544 23.0264 57.6544 29.7644C57.6544 31.2238 58.8337 32.4031 60.293 32.4031C61.7523 32.4031 62.9317 31.2238 62.9317 29.7644C62.9317 21.655 59.7689 14.08 54.3106 8.62133C48.8523 3.16267 41.2773 0 33.1679 0H31.9997Z"/>
-    <path d="M32 12C25.383 12 19.6667 16.7163 19.6667 23.3333C19.6667 29.9503 25.383 34.6667 32 34.6667C38.617 34.6667 44.3333 29.9503 44.3333 23.3333C44.3333 16.7163 38.617 12 32 12ZM32 29.3333C28.3247 29.3333 25.3333 26.342 25.3333 22.6667C25.3333 18.9913 28.3247 16 32 16C35.6753 16 38.6667 18.9913 38.6667 22.6667C38.6667 26.342 35.6753 29.3333 32 29.3333Z"/>
+  <symbol id="icon-antenna-1" viewBox="0 0 64 64">
+    <!-- вставлений код icon-antenna.svg -->
+    <circle cx="32" cy="32" r="30" stroke="#2E2F42" stroke-width="2" fill="none"/>
+    <path d="M20 40 L32 20 L44 40 Z" stroke="#2E2F42" stroke-width="2" fill="none"/>
+    <circle cx="32" cy="20" r="4" fill="#4D5AE5"/>
   </symbol>
 
   <!-- CLOCK -->
-  <symbol id="icon-clock" viewBox="0 0 64 64">
-    <path d="M32 0C14.355 0 0 14.355 0 32C0 49.645 14.355 64 32 64C49.645 64 64 49.645 64 32C64 14.355 49.645 0 32 0ZM32 58C17.664 58 6 46.336 6 32C6 17.664 17.664 6 32 6C46.336 6 58 17.664 58 32C58 46.336 46.336 58 32 58Z"/>
-    <path d="M46 34H33V14C33 12.895 32.105 12 31 12C29.895 12 29 12.895 29 14V36C29 37.105 29.895 38 31 38H46C47.105 38 48 37.105 48 36C48 34.895 47.105 34 46 34Z"/>
+  <symbol id="icon-clock-1" viewBox="0 0 64 64">
+    <!-- вставлений код icon-clock.svg -->
+    <circle cx="32" cy="32" r="30" stroke="#2E2F42" stroke-width="2" fill="none"/>
+    <line x1="32" y1="32" x2="32" y2="16" stroke="#2E2F42" stroke-width="2"/>
+    <line x1="32" y1="32" x2="44" y2="32" stroke="#2E2F42" stroke-width="2"/>
   </symbol>
 
   <!-- DIAGRAM -->
-  <symbol id="icon-diagram" viewBox="0 0 64 64">
-    <path d="M56 0H8C3.582 0 0 3.582 0 8V56C0 60.418 3.582 64 8 64H56C60.418 64 64 60.418 64 56V8C64 3.582 60.418 0 56 0ZM58 56C58 57.103 57.103 58 56 58H8C6.897 58 6 57.103 6 56V8C6 6.897 6.897 6 8 6H56C57.103 6 58 6.897 58 8V56Z"/>
-    <path d="M20 44H14V50H20V44ZM30 32H24V50H30V32ZM40 24H34V50H40V24ZM50 18H44V50H50V18Z"/>
+  <symbol id="icon-diagram-1" viewBox="0 0 64 64">
+    <!-- вставлений код icon-diagram.svg -->
+    <rect x="14" y="30" width="8" height="20" fill="#4D5AE5"/>
+    <rect x="28" y="20" width="8" height="30" fill="#4D5AE5"/>
+    <rect x="42" y="10" width="8" height="40" fill="#4D5AE5"/>
   </symbol>
 
   <!-- ASTRONAUT -->
-  <symbol id="icon-astronaut" viewBox="0 0 64 64">
-    <path d="M32 0C20.954 0 12 8.954 12 20C12 31.046 20.954 40 32 40C43.046 40 52 31.046 52 20C52 8.954 43.046 0 32 0ZM32 36C23.178 36 16 28.822 16 20C16 11.178 23.178 4 32 4C40.822 4 48 11.178 48 20C48 28.822 40.822 36 32 36Z"/>
-    <path d="M32 48C21.507 48 12.928 54.676 10 64H54C51.072 54.676 42.493 48 32 48Z"/>
-    <circle cx="32" cy="20" r="8"/>
+  <symbol id="icon-astronaut-1" viewBox="0 0 64 64">
+    <!-- вставлений код icon-astronaut.svg -->
+    <circle cx="32" cy="20" r="10" stroke="#2E2F42" stroke-width="2" fill="none"/>
+    <rect x="22" y="30" width="20" height="24" stroke="#2E2F42" stroke-width="2" fill="none"/>
+  </symbol>
+
+  <!-- INSTAGRAM -->
+  <symbol id="icon-instagram" viewBox="0 0 24 24">
+    <!-- вставлений код icon-instagram.svg -->
+  </symbol>
+
+  <!-- TWITTER -->
+  <symbol id="icon-twitter" viewBox="0 0 24 24">
+    <!-- вставлений код icon-twitter.svg -->
+  </symbol>
+
+  <!-- FACEBOOK -->
+  <symbol id="icon-facebook" viewBox="0 0 24 24">
+    <!-- вставлений код icon-facebook.svg -->
+  </symbol>
+
+  <!-- LINKEDIN -->
+  <symbol id="icon-linkedin" viewBox="0 0 24 24">
+    <!-- вставлений код icon-linkedin.svg -->
   </symbol>
 
 </svg>
