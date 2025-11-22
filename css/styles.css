@@ -248,14 +248,14 @@ button {
   background-color: var(--cloud);
   border: 1px solid var(--cornflower);
   margin-bottom: 8px;
-  color: var(--navy); /* важливо – currentColor передається в stroke іконки */
+  color: var(--navy);
 }
 
 /* СТИЛІ SVG-ІКОНОК */
 .features-icon {
   display: block;
-  fill: none;               /* прибираємо чорний круг */
-  stroke: currentColor;     /* лінії беруть колір батька */
+  fill: none;
+  stroke: currentColor;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -365,6 +365,12 @@ button {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-thumb {
   position: relative;
   overflow: hidden;
@@ -453,7 +459,8 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--iris);
 }
 
@@ -486,6 +493,7 @@ button {
   border: 1px solid #ffffff;
   background-color: transparent;
   font-size: 12px;
+  line-height: 1.5;
   color: #ffffff;
 }
 
@@ -502,13 +510,18 @@ button {
   background-color: var(--iris);
   color: #ffffff;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form-btn:hover {
+.footer-form-btn:hover,
+.footer-form-btn:focus {
   background-color: var(--ocean);
 }
 
@@ -526,7 +539,8 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms, visibility 250ms;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -545,6 +559,10 @@ button {
   padding: 72px 24px 24px;
   border-radius: 4px;
   background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -560,25 +578,34 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.modal-close-btn:hover {
-  background-color: var(--ocean);
-  border: none;
-}
-
-.modal-close-btn:hover .modal-close-icon {
-  fill: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
   fill: var(--navy);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--ocean);
+  border: none;
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--white);
 }
 
 .modal-title {
   margin-bottom: 16px;
   text-align: center;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--navy);
 }
 
 .modal-form {
@@ -595,8 +622,11 @@ button {
 }
 
 .modal-label {
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: var(--lightslate);
 }
 
@@ -611,6 +641,16 @@ button {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
+  outline: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input::placeholder {
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-input:hover,
@@ -624,6 +664,12 @@ button {
   left: 16px;
   transform: translateY(-50%);
   fill: var(--navy);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus + .modal-input-icon,
+.modal-input:hover + .modal-input-icon {
+  fill: var(--iris);
 }
 
 .modal-textarea {
@@ -633,6 +679,15 @@ button {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   resize: none;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-textarea:hover,
@@ -656,12 +711,16 @@ button {
   overflow: hidden;
 }
 
+/* текст у label чекбокса */
 .modal-terms-text {
   font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: var(--lightslate);
 }
 
-.modal-terms-text .modal-checkbox-custom {
+/* квадрат чекбокса */
+.modal-checkbox-custom {
   width: 16px;
   height: 16px;
   margin-right: 8px;
@@ -670,13 +729,25 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms, border 250ms, fill 250ms;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox-icon {
+  fill: currentColor;
 }
 
 .modal-checkbox-input:checked + .modal-terms-text .modal-checkbox-custom {
   background-color: var(--ocean);
   border: none;
   fill: var(--cloud);
+}
+
+.modal-policy-link {
+  color: var(--iris);
+  text-decoration: underline;
 }
 
 .modal-submit-btn {
@@ -690,10 +761,16 @@ button {
   background-color: var(--iris);
   color: var(--white);
   font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
   background-color: var(--ocean);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
