@@ -219,8 +219,8 @@ button {
   letter-spacing: 0.04em;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* тільки background-color у transition, як у чек-листі */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -595,13 +595,14 @@ button {
   border: none;
 }
 
+.modal-close-icon {
+  fill: var(--navy);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: var(--white);
-}
-
-.modal-close-icon {
-  fill: var(--navy);
 }
 
 .modal-title {
@@ -730,18 +731,13 @@ button {
   margin-right: 8px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  display: inline-flex;
+  display: inline-flex; /* те саме, що просить чек-лист */
   align-items: center;
   justify-content: center;
-  fill: transparent; /* для тесту fill: transparent */
+  fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-checkbox-icon {
-  fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-input:checked
@@ -750,6 +746,12 @@ button {
   background-color: var(--ocean);
   border: none;
   fill: var(--cloud);
+}
+
+.modal-checkbox-icon {
+  width: 10px;
+  height: 8px;
+  fill: currentColor;
 }
 
 .modal-policy-link {
@@ -767,11 +769,12 @@ button {
   background-color: var(--iris);
   color: var(--white);
   font-size: 16px;
-  font-weight: 500; /* для тесту font-weight: 500 */
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* знову – тільки background-color у transition */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
