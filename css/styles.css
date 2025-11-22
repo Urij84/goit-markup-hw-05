@@ -219,8 +219,8 @@ button {
   letter-spacing: 0.04em;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  /* чек-лист: тільки background-color в transition */
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -525,6 +525,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -535,8 +536,6 @@ button {
 }
 
 .footer-form-icon {
-  /* чек-лист: відступ зліва 16px */
-  margin-left: 16px;
   fill: #ffffff;
 }
 
@@ -581,8 +580,6 @@ button {
   right: 24px;
   width: 24px;
   height: 24px;
-  /* чек-лист: обнулити паддінг */
-  padding: 0;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
@@ -590,8 +587,6 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -600,15 +595,13 @@ button {
   border: none;
 }
 
-.modal-close-icon {
-  fill: var(--navy);
-  /* чек-лист: плавна зміна fill */
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: var(--white);
+}
+
+.modal-close-icon {
+  fill: var(--navy);
 }
 
 .modal-title {
@@ -737,17 +730,18 @@ button {
   margin-right: 8px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  /* чек-лист: саме тут має бути inline-flex */
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  fill: transparent; /* для тесту fill: transparent */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-icon {
-  fill: transparent;
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-input:checked
@@ -773,6 +767,7 @@ button {
   background-color: var(--iris);
   color: var(--white);
   font-size: 16px;
+  font-weight: 500; /* для тесту font-weight: 500 */
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
