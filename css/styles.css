@@ -9,7 +9,7 @@
   --cornflower: #e7e9fc;
 }
 
-/* ================ GLOBAL ================= */
+/* ================= GLOBAL ================= */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -49,8 +49,8 @@ button {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  border: 0;
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -61,8 +61,10 @@ button {
 
 .container {
   width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
@@ -84,9 +86,6 @@ button {
 
 .page-header {
   border-bottom: 1px solid var(--cornflower);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-inner {
@@ -104,21 +103,17 @@ button {
 .logo {
   display: inline-block;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--iris);
   text-decoration: none;
-}
-
-.logo-accent {
   color: var(--navy);
 }
 
-.header-contacts {
-  font-style: normal;
+.logo-accent {
+  color: var(--iris);
 }
 
 .nav-list {
@@ -129,13 +124,13 @@ button {
 .nav-link {
   position: relative;
   display: block;
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--navy);
   text-decoration: none;
+  color: var(--navy);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -144,11 +139,11 @@ button {
   color: var(--ocean);
 }
 
-.nav-link-current {
+.nav-link.current {
   color: var(--ocean);
 }
 
-.nav-link-current::after {
+.nav-link.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -167,9 +162,8 @@ button {
 .contacts-link {
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--slate);
   text-decoration: none;
+  color: var(--slate);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -181,25 +175,26 @@ button {
 /* ================= HERO ==================== */
 
 .hero-section {
-  max-width: 1440px;
-  margin: 0 auto;
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
   background-color: var(--navy);
   background-image: linear-gradient(
+      to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position: center;
+  color: var(--white);
 }
 
 .hero-inner {
   max-width: 496px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -207,13 +202,11 @@ button {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  color: var(--white);
 }
 
 .hero-btn {
   display: inline-block;
   min-width: 169px;
-  height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
   border: none;
@@ -232,14 +225,9 @@ button {
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--ocean);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* ================ FEATURES ================= */
-
-.features-section {
-  padding-bottom: 0;
-}
 
 .features-list {
   display: flex;
@@ -250,20 +238,27 @@ button {
   width: calc((100% - 72px) / 4);
 }
 
-.feature-icon-wrapper {
-  height: 112px;
-  margin-bottom: 8px;
-  border-radius: 4px;
-  background-color: var(--cloud);
-  border: 1px solid var(--cornflower);
+/* БЛОК ІКОНКИ */
+.features-icon-box {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 112px;
+  border-radius: 4px;
+  background-color: var(--cloud);
+  border: 1px solid var(--cornflower);
+  margin-bottom: 8px;
+  color: var(--navy); /* важливо – currentColor передається в stroke іконки */
 }
 
-/* не задаємо fill, щоб не ламати svg-іконки */
-.feature-icon {
+/* СТИЛІ SVG-ІКОНОК */
+.features-icon {
   display: block;
+  fill: none;               /* прибираємо чорний круг */
+  stroke: currentColor;     /* лінії беруть колір батька */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .features-title {
@@ -277,12 +272,12 @@ button {
 .features-text {
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  color: var(--slate);
 }
 
 /* ================= TEAM ==================== */
 
-.team-section {
+.section-team {
   background-color: var(--cloud);
 }
 
@@ -300,8 +295,8 @@ button {
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.team-card {
-  padding: 32px 0;
+.team-content {
+  padding: 32px 16px;
   text-align: center;
 }
 
@@ -310,61 +305,41 @@ button {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
   color: var(--navy);
 }
 
-.team-role {
-  margin-bottom: 8px;
+.team-position {
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  color: var(--slate);
 }
 
-/* ===== SOCIAL ICONS (TEAM + FOOTER) ===== */
+/* SOCIAL ICONS */
 
-.social-list {
+.team-social-list {
   display: flex;
   justify-content: center;
   gap: 24px;
+  margin-top: 8px;
 }
 
-.footer-social-list {
-  justify-content: flex-start;
-  gap: 16px;
-}
-
-.social-item {
+.team-social-link {
   width: 40px;
   height: 40px;
-}
-
-.social-link {
-  width: 100%;
-  height: 100%;
   border-radius: 50%;
   background-color: var(--iris);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover,
-.social-link:focus {
-  background-color: #404bbf;
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--ocean);
 }
 
-.footer-social-list .social-link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-social-list .social-link:hover,
-.footer-social-list .social-link:focus {
-  background-color: #31d0aa;
-}
-
-.social-icon {
+.team-social-icon {
   fill: var(--cloud);
 }
 
@@ -385,16 +360,9 @@ button {
   width: calc((100% - 48px) / 3);
   background-color: var(--white);
   border: 1px solid var(--cornflower);
-  border-top: none;
-  box-shadow: none;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-item:hover,
-.portfolio-item:focus-within {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-thumb {
@@ -404,42 +372,33 @@ button {
 
 .portfolio-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   padding: 40px 32px;
   background-color: var(--iris);
   color: var(--cloud);
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .portfolio-overlay,
-.portfolio-item:focus-within .portfolio-overlay {
-  transform: translateY(0%);
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
 }
 
-.portfolio-info {
+.portfolio-content {
   padding: 32px 16px;
 }
 
 .portfolio-title {
   margin-bottom: 8px;
-  font-weight: 500;
   font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
   color: var(--navy);
 }
 
 .portfolio-text {
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  color: var(--slate);
 }
 
 /* ================= FOOTER ================== */
@@ -463,29 +422,46 @@ button {
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
-}
-
-.logo-accent-footer {
   color: var(--cloud);
 }
 
 .footer-text {
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--cloud);
 }
 
 .footer-social-title {
   margin-bottom: 16px;
-  font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--white);
 }
 
-/* FOOTER SUBSCRIBE FORM */
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-link:hover {
+  background-color: var(--iris);
+}
+
+.footer-social-icon {
+  fill: var(--cloud);
+}
+
+/* FOOTER FORM */
 
 .footer-subscribe {
   margin-left: auto;
@@ -493,11 +469,8 @@ button {
 
 .footer-subscribe-title {
   margin-bottom: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--white);
+  font-weight: 500;
 }
 
 .footer-form {
@@ -510,56 +483,41 @@ button {
   height: 40px;
   padding-left: 16px;
   border-radius: 4px;
-  border: 1px solid var(--white);
+  border: 1px solid #ffffff;
   background-color: transparent;
-  outline: transparent;
   font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  color: var(--white);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ffffff;
 }
 
 .footer-form-input::placeholder {
-  color: var(--white);
-}
-
-.footer-form-input:hover,
-.footer-form-input:focus {
-  border-color: var(--iris);
+  color: #ffffff;
 }
 
 .footer-form-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   min-width: 165px;
   height: 40px;
   padding: 8px 24px;
   border-radius: 4px;
   border: none;
   background-color: var(--iris);
-  color: var(--white);
+  color: #ffffff;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-form-btn:hover,
-.footer-form-btn:focus {
+.footer-form-btn:hover {
   background-color: var(--ocean);
 }
 
 .footer-form-icon {
   margin-left: 16px;
-  fill: var(--white);
+  fill: #ffffff;
 }
 
-/* ============= MODAL & BACKDROP =========== */
+/* ===== MODAL ===== */
 
 .backdrop {
   position: fixed;
@@ -568,8 +526,7 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms, visibility 250ms;
 }
 
 .backdrop.is-open {
@@ -588,13 +545,7 @@ button {
   padding: 72px 24px 24px;
   border-radius: 4px;
   background-color: #fcfcfc;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* CLOSE BUTTON */
 
 .modal-close-btn {
   position: absolute;
@@ -608,36 +559,26 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-icon {
-  fill: var(--navy);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:hover {
   background-color: var(--ocean);
   border: none;
 }
 
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
+.modal-close-btn:hover .modal-close-icon {
   fill: var(--white);
+}
+
+.modal-close-icon {
+  fill: var(--navy);
 }
 
 .modal-title {
   margin-bottom: 16px;
   text-align: center;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--navy);
 }
 
 .modal-form {
@@ -654,11 +595,8 @@ button {
 }
 
 .modal-label {
-  display: block;
   margin-bottom: 4px;
   font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
   color: var(--lightslate);
 }
 
@@ -670,16 +608,14 @@ button {
   width: 100%;
   height: 40px;
   padding-left: 38px;
-  padding-right: 16px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
-  outline: transparent;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--navy);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  border-color: var(--iris);
 }
 
 .modal-input-icon {
@@ -688,17 +624,6 @@ button {
   left: 16px;
   transform: translateY(-50%);
   fill: var(--navy);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-input:hover,
-.modal-input:focus {
-  border-color: var(--iris);
-}
-
-.modal-input:hover + .modal-input-icon,
-.modal-input:focus + .modal-input-icon {
-  fill: var(--iris);
 }
 
 .modal-textarea {
@@ -708,17 +633,6 @@ button {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   resize: none;
-  outline: transparent;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  background-color: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-textarea::placeholder {
-  color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-textarea:hover,
@@ -726,10 +640,7 @@ button {
   border-color: var(--iris);
 }
 
-/* checkbox */
-
 .modal-field-checkbox {
-  margin-top: 16px;
   margin-bottom: 24px;
 }
 
@@ -747,8 +658,6 @@ button {
 
 .modal-terms-text {
   font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
   color: var(--lightslate);
 }
 
@@ -761,11 +670,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  fill: transparent;
-  background-color: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms, border 250ms, fill 250ms;
 }
 
 .modal-checkbox-input:checked + .modal-terms-text .modal-checkbox-custom {
@@ -774,30 +679,21 @@ button {
   fill: var(--cloud);
 }
 
-.modal-policy-link {
-  color: var(--iris);
-}
-
 .modal-submit-btn {
   display: block;
   margin: 0 auto;
   min-width: 169px;
   height: 56px;
   padding: 16px 32px;
-  border-radius: 4px;
   border: none;
+  border-radius: 4px;
   background-color: var(--iris);
   color: var(--white);
-  font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
   background-color: var(--ocean);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
